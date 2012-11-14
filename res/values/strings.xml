@@ -1,0 +1,10 @@
+<resources>
+
+    <string name="app_name">FishBoy</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+    <string name="title_activity_fishboy">FishboyActivity</string>
+    <string name="title_activity_life_cycle">LifeCycleActivity</string>
+    <string name="title_activity_single_touch_test">SingleTouchTest</string>
+
+</resources>
