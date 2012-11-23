@@ -8,8 +8,11 @@ import com.badlogic.androidgames.framework.Input.TouchEvent;
 import com.badlogic.androidgames.framework.Screen;
 
 public class MainMenuScreen extends Screen {
+	private Clouds clouds;
+	
     public MainMenuScreen(Game game) {
         super(game);
+        clouds = new Clouds(game);
         if (Settings.soundEnabled){
         	Assets.menu.play();
             Assets.menu.setLooping(true);	
@@ -50,6 +53,7 @@ public class MainMenuScreen extends Screen {
                 }
             }
         }
+        clouds.update(deltaTime);
     }
     
     private boolean inBounds(TouchEvent event, int x, int y, int width, int height) {
@@ -64,6 +68,7 @@ public class MainMenuScreen extends Screen {
     public void present(float deltaTime) {
         Graphics g = game.getGraphics();
         g.drawPixmap(Assets.background, 0, 0);
+        clouds.drawClouds();
         g.drawPixmap(Assets.logo, 140, 10);
         g.drawPixmap(Assets.mainMenuBg, 142, 74);
         g.drawPixmap(Assets.mainMenu, 145, 120);
@@ -71,6 +76,7 @@ public class MainMenuScreen extends Screen {
             g.drawPixmap(Assets.buttons, 0, 320 - 64, 0, 0, 64, 64);
         else
             g.drawPixmap(Assets.buttons, 0, 320 -64 , 64, 0, 64, 64);
+        
     }
 
     @Override

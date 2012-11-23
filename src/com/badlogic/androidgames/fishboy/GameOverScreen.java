@@ -35,7 +35,7 @@ public class GameOverScreen extends Screen {
 		// TODO Auto-generated method stub
 		Graphics g = game.getGraphics();
 		g.drawPixmap(Assets.gameOverBg, 0, 0);
-		g.drawPixmap(Assets.gameOver, 300, 40);
+		g.drawPixmap(Assets.gameOver, 100, 40);
 
 	}
 

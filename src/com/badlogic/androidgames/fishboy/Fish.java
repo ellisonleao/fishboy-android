@@ -13,11 +13,13 @@ public class Fish {
 	public boolean isCaptured;
 	public Rect bounds;
 	private Random rand;
+	private Game game;
 	
-	public Fish(Vector2 position) {
+	public Fish(Vector2 position, Game game) {
 		this.position = position;
 		this.isDead = false;
 		this.isCaptured = false;
+		this.game = game;
 		this.rand = new Random();
 		this.bounds = new Rect();
 	}
@@ -25,8 +27,9 @@ public class Fish {
 	public void update(float deltaTime){
 		this.position.add(new Vector2(0, -8.0f * deltaTime));
 		
-		if (this.position.y == 90){
+		if (this.position.y < 200){
 			this.isDead = true;
+			reboot(this.game);
 		}
 		
 		if (isDead){
