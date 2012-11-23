@@ -141,9 +141,7 @@ public class GameScreen extends Screen {
 		for (int i = 0; i < fishes.size() ; i++){
 			g.drawPixmap(Assets.fish, (int) fishes.get(i).position.x, (int) fishes.get(i).position.y);
 	        g.drawRect(fishes.get(i).bounds, paint);
-
 		}
-		drawText(g, "" + fishes.get(1).position.y, 50, 50); 
 	}
 
 

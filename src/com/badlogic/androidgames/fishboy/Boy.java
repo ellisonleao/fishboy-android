@@ -5,7 +5,7 @@ import android.graphics.Rect;
 import com.badlogic.androidgames.framework.math.Vector2;
 
 public class Boy {
-	private float vel = 20.0f;
+	private float vel = 30.0f;
 	public Vector2 position;
 	public boolean moveLeft;
 	public boolean stop;
